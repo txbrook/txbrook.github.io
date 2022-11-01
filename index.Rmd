@@ -1,4 +1,11 @@
 ---
 title: "Welcome to my website"
 ---
+This is my website. 
 
+You can learn more [about me](about.html) and check out my projects on [github](http://github.com/txbrook/).
+
+<br/><br/>
+<center>
+<img src="img/home.jpeg">
+</center>
