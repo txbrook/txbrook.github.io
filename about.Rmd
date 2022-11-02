@@ -1,10 +1,6 @@
 
 ---
 title: "About me"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
 ---
 
 # Academic Experience
@@ -25,8 +21,8 @@ Relevant coursework: Real Analysis, Partial Differential Equations, Complex Anal
 
 # Professional Experience
 
-#### Mathematical explanation of Analemma
+### Mathematical explanation of Analemma
 
-The Ohio State University, columbus,OH Jan 2022 - May 2022\
+#### The Ohio State University, Columbus,OH       Jan 2022 - May 2022
 * Found the cause of the diagram formation using spherical geometry and calculus of vector-valued functions and established a general formula using differential equation and coordinate transformation 
 * Provided a mathematical explanation and the general formula for the Analemma depending on the observer's latitude and local time and an easy-to-understand model
