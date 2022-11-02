@@ -6,6 +6,7 @@ output:
     toc: true
     toc_float: true
 ---
+My name is Yuchen Zhang. I currently based in New York, NY and looking for part-time opportunities during the school year and full-time internship opportunities during the summer. 
 
 # Academic Experience
 
@@ -13,14 +14,14 @@ output:
 
 #### New York, NY
 
-Masters of Science, Expected May 2024\
+Masters of Science, Aug2022- (Expected)May 2024\
 Relevant coursework: Biostatistical methods, Data Science I, Probability, Epidemiology
 
 ### The Ohio State University
 
 #### Columbus, OH
 
-Bachelors of Science in Mathematics, May 2022\
+Bachelors of Science in Mathematics, Aug2019 - May 2022\
 Relevant coursework: Real Analysis, Partial Differential Equations, Complex Analysis, Analytic Chemistry
 
 # Professional Experience
@@ -30,3 +31,6 @@ Relevant coursework: Real Analysis, Partial Differential Equations, Complex Anal
 #### The Ohio State University, Columbus,OH       Jan 2022 - May 2022
 * Found the cause of the diagram formation using spherical geometry and calculus of vector-valued functions and established a general formula using differential equation and coordinate transformation 
 * Provided a mathematical explanation and the general formula for the Analemma depending on the observer's latitude and local time and an easy-to-understand model
+
+# Skills
+R, Matlab, Java
