@@ -1,6 +1,10 @@
 
 ---
 title: "About me"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 # Academic Experience
@@ -10,7 +14,7 @@ title: "About me"
 #### New York, NY
 
 Masters of Science, Expected May 2024\
-Relevant coursework: Longitudinal Analysis, Data Science I, Probability, Epidemiology
+Relevant coursework: Biostatistical methods, Data Science I, Probability, Epidemiology
 
 ### The Ohio State University
 
