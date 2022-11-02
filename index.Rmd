@@ -1,9 +1,5 @@
 ---
 title: "Welcome to my website!"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
 ---
 This is my website. 
 
