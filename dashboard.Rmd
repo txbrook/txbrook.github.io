@@ -1,0 +1,77 @@
+---
+title: "Dashboard for NYC Restaurant Inspection Results"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+
+```{r }
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+data("rest_inspec")
+rest_inspec_df = rest_inspec %>% 
+select("boro","cuisine_description","inspection_date","inspection_date","score","grade")
+```
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+
+### Barplot of  of violations in cuisine
+
+```{r}
+rest_inspec_df %>% 
+  count(cuisine_description) %>% 
+  filter(n > 5000) %>%
+  mutate(
+  cuisine_description = ifelse( cuisine_description == "Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Latin",cuisine_description),
+  cuisine_description = fct_reorder(cuisine_description, n)) %>% 
+  plot_ly(x = ~cuisine_description, y = ~n, color = ~cuisine_description, type = "bar", colors = "viridis", source="rest_inspec_df") %>% 
+   layout(title = "Number Of Violations In Each Cuisine",
+    xaxis = list(title = "cuisine"),
+    yaxis = list(title = "number of violations"))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### lines plot of violation date
+
+```{r}
+rest_inspec_df %>% 
+    select("boro","inspection_date") %>% 
+    filter(!is.na(inspection_date)) %>% 
+    separate(inspection_date,c('year','month','day'),sep='-') %>%
+    mutate(
+    year = as.integer(year),
+    month = as.integer(month),
+    day = as.integer(day)
+    ) %>% 
+    filter(year != 1900) %>% 
+  filter(boro != "Missing") %>% 
+   group_by(year, boro) %>% 
+   summarise(n_violation = n()) %>% 
+   plot_ly(
+   y = ~ n_violation, x = ~year, color = ~boro, mode = "line", colors = "viridis") %>% 
+  layout(title = "Number Of violations In Each Year",
+    xaxis = list(title = "year"),
+    yaxis = list(title = "number of violations"))
+```
+
+
+### Boxplot of score of restaurant with grade A in each boro
+
+```{r}
+  rest_inspec_df %>% 
+  filter(grade == "A") %>% 
+  filter(boro != "Missing") %>% 
+  na.omit() %>% 
+  plot_ly(y = ~score, type = "box", color = ~boro, alpha = 0.5) %>% 
+  layout(title = "Score Of Restaurant With Grade A In Each Boro")
+```
+
+
+
