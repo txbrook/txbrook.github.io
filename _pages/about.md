@@ -8,7 +8,3 @@ redirect_from:
 ---
 
 I am currently a Ph.D. student in Biostatistics at UTHealth School of Public Health. Prior to this, I obtained my M.S. in Biostatistics from Columbia University and my B.S. in Mathematics from The Ohio State University. I am currently working at MD Anderson Cancer Center, focusing on applied research in machine learning, and artificial intelligence.
-
-Research Interests
-======
-My research interests include efficient reasoning, causal inference, representation learning, optimization, and the design of MCP and multi-turn interaction frameworks for general-purpose applications.
