@@ -26,9 +26,9 @@ author:
   avatar           : "profile.png"
   name             : "Yuchen Zhang"
   pronouns         : # example: "she/her"  
-  bio              : "PhD student in Biostatistics in UTHealth working at MD Anderson"
+  bio              : "PhD student in Biostatistics in UTHealth"
   location         : "Palo Alto"
-  employer         : "UTHealth / MD Anderson"
+  employer         : # "UTHealth / MD Anderson"
   uri              : # URL
   email            : "its.yuchenz@outlook.com" 
 
