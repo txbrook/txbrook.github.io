@@ -5,35 +5,32 @@ permalink: /publications/
 author_profile: true
 ---
 
+
 Research Interests
 ======
 My research interests lie in Biostatistics.
 
 {% if site.author.googlescholar %}
 <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar
-        profile</a>.</div>
+                profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-{% for category in site.publication_category %}
-{% assign title_shown = false %}
-{% for post in site.publications reversed %}
-{% if post.category != category[0] %}
-{% continue %}
-{% endif %}
-{% unless title_shown %}
-<h2>{{ category[1].title }}</h2>
+<h2>Publications</h2>
 <hr />
-{% assign title_shown = true %}
-{% endunless %}
-{% include archive-single.html %}
-{% endfor %}
-{% endfor %}
-{% else %}
-{% for post in site.publications reversed %}
-{% include archive-single.html %}
-{% endfor %}
-{% endif %}
+
+<div class="list__item">
+        <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+                <h2 class="archive__item-title" itemprop="headline">
+                        <a href="/publication/2024-01-01-paper-title-number-1" rel="permalink">Paper Title Number 1</a>
+                </h2>
+
+                <p>Published in <i>Journal 1</i>, 2024 </p>
+
+                <p class="archive__item-excerpt" itemprop="description">This is a short summary of the paper.</p>
+
+                <p>Recommended citation: Your Name, You. (2024). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>.
+                        1(1).<br /><a href="http://academicpages.github.io/files/paper1.pdf">Download Paper</a></p>
+        </article>
+</div>
